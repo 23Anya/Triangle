@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sierpinski's Triangle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="icon" type="image/x-icon" href="/imgs/triangle.ico">
+  <script defer src="./scripts/triangle.js"></script>
+  <!-- <script defer src="./scripts/mobile.js"></script> -->
+  <script defer src="./scripts/scripts.js"></script>
+</head>
+<body>
+  <header>
+    <h1>See Sierpinkski's Triangle in Action</h1>
+  </header>
+  <main>
+    <div>
+    <p>Move the blue and green dots to set your triangle, then click inside the triangle to start.</p>
+  </div>
+    <div id="svg-div">
+      <div id="triangle-container">
+        <svg width="100%" id="cartesian-positive-plane"  viewBox="0 0 1000 1000" 
+          preserveAspectRatio="xMidYMid meet" 
+          xmlns="http://www.w3.org/2000/svg">
+          <line x1="0" y1="1000" x2="0" y2="0" style="stroke-width:3; stroke:black" />
+          <line x1="0" y1="1000" x2="1000" y2="1000" style="stroke-width:3; stroke:black" />
+          <line x1="1000" y1="0" x2="1000" y2="1000" style="stroke-width:3; stroke:black" />
+          <line x1="0" y1="0" x2="1000" y2="0" style="stroke-width:3; stroke:black" />
+          <polyline points="0,1000 900,800 150,200 0,1000" style="fill:#FFF;stroke:darkred;stroke-width:1" id="triangle"/>
+          <text x="910" y="790" id="text-one" font-size="2rem">[900, 200]</text>
+          <text x="160" y="190" id="text-two" font-size="2rem">[150, 800]</text>
+          <circle cx="900" cy="800" r="10" style="fill: blue;" id="point-one" draggable="true"/>
+          <circle cx="150" cy="200" r="10" style="fill: green;" id="point-two" draggable="true"/>
+          <circle cx="0" cy="1000" r="10" style="fill: orange;" id="origin"/>
+        </svg>
+      </div>
+      <div class="right-div">
+        <label name="iterations" for="iterations">Number of Iterations:<input type="text" value="25000" id="iterations"/></label>
+        <p>
+          <button id="reset-btn">
+            Reset
+          </button>
+          <button id="stop-btn">
+            Stop
+          </button>
+        </p>
+      </div>
+    
+  </div>
+  </main>
+  <footer>&copy;AnyaSoft &nbsp; <span id="footer-date"></span></footer>
+</body>
+</html>

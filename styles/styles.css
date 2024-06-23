@@ -1,0 +1,119 @@
+:root {
+  font: 16pt "Ubuntu Mono","Fira Sans", sans-serif;
+  box-sizing: content-box;
+  --green-background: #536c2f;
+  --light-green-background: #8ab54e;
+  --point-circumference: 4px;
+  --radius: calc(var(--point-circumference) / 2);
+}
+
+body {
+  outline: 3px solid rgb(200,200,200);
+  padding: 0;
+  margin: 3px;
+}
+
+header {
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  background-color: var(--green-background);
+  border-bottom: 3px solid black;
+}
+
+main {
+  padding: 5px;
+  min-height: calc(100vh - 186px);
+}
+
+main div {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+}
+
+h1 {
+  font-size: clamp(16px, 5vw, 48px);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--green-background);
+  border-top: 3px solid black;
+  height: 2rem;
+}
+
+svg {
+  background-color: #AAA;
+  touch-action: none;
+}
+
+button {
+  margin: 0.3rem 1rem;
+  max-height: 2rem;
+  width: 6rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  padding: 0.2rem 0.5rem;
+  color: white;
+  background-color: var(--green-background);
+  border: none;
+}
+
+button:active {
+  background-color: var(--light-green-background);
+}
+
+text:hover {
+  cursor:default;
+}
+
+#triangle-container {
+  display: flex;
+  height: 600px;
+  width: 600px;
+  max-width: 95vw;
+  max-height: 95vw;
+}
+
+#svg-div label {
+  margin-left: 1rem;
+  display: block;
+  flex-direction: column;
+  max-width: calc(100vw - 700px);
+}
+
+input {
+  width: 6rem;
+  height: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 0.4rem;
+  padding-left: 5px;
+  font-size: 0.7rem;
+}
+
+.right-div {
+  flex-direction: column; 
+  justify-content: flex-start;
+  max-width: 250px;
+}
+
+.right-div p{
+  margin: 0.3rem inherit;
+
+}
+
+@media screen and (max-width: 830px) {
+  main div {
+    flex-direction: column;
+  }
+  #svg-div label {
+    max-width: 90vw - 600px;
+  }
+}
+
